@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="simluation.css">
+</head>
+
+<body>
+    <form>
+        <div class="ball_data">
+            <div class="feild_wrapper">
+                <div class="feild">
+                    <label for="m1_mass">Mass</label>
+                    <input id="m1_mass" type="range" max="50" min="1" onchange="set_mass(1,this.value)">
+                </div>
+                <div class="feild place">
+                    <label>x</label>
+                    <input type="number" id="m1_input_x" onchange="set_position(1,'x',this.value)">
+                </div>
+                <div class="feild place">
+                    <label>y</label>
+                    <input type="number" id="m1_input_y" onchange="set_position(1,'y',this.value)">
+                </div>
+            </div>
+            <div class="vector" id="vector1">
+                <div class="pivot" id="pivot1"></div>
+                <div class="arrow" id="myArrow1">
+                    <img src="right_arrow.png" alt="">
+                </div>
+                <div class="head" id="head1" draggable="true"></div>
+            </div>
+        </div>
+        <div class="ball_data">
+            <div class="feild_wrapper">
+                <div class="feild">
+                    <label for="m2_mass">Mass</label>
+                    <input id="m2_mass" type="range" max="50" min="1" onchange="set_mass(2,this.value)">
+                </div>
+                <div class="feild place">
+                    <label>x</label>
+                    <input type="number" id="m2_input_x" onchange="set_position(2,'x',this.value)">
+                </div>
+                <div class="feild place">
+                    <label>y</label>
+                    <input type="number" id="m2_input_y" onchange="set_position(2,'y',this.value)">
+                </div>
+            </div>
+            <div class="vector" id="vector2">
+                <div class="pivot" id="pivot2"></div>
+                <div class="arrow" id="myArrow2">
+                    <img src="right_arrow.png" alt="">
+                </div>
+                <div class="head" id="head2" draggable="true"></div>
+            </div>
+        </div>
+        <button id="btn">Go</button>
+    </form>
+    <canvas id="myCanvas"></canvas>
+    <script src="body3.js"></script>
+</body>
+
+</html>
